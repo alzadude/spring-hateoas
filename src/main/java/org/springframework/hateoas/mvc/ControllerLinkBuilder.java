@@ -141,7 +141,6 @@ public class ControllerLinkBuilder extends LinkBuilderSupport<ControllerLinkBuil
 		Iterator<String> templateVariables = template.getVariableNames().iterator();
 		while (classMappingParameters.hasNext() && templateVariables.hasNext()) {
 			values.put(templateVariables.next(), classMappingParameters.next());
-			}
 		}
 
 		values.putAll(pathVariableAccessor.getBoundParameters(invocation));
