@@ -4,7 +4,7 @@
 	
 	<groupId>org.springframework.hateoas</groupId>
 	<artifactId>spring-hateoas</artifactId>
-	<version>0.4.1.nineworthies-SNAPSHOT</version>
+	<version>0.4.1.nineworthies</version>
 	
 	<name>Spring Hateoas</name>
 	<url>http://github.com/SpringSource/spring-hateoas</url>
@@ -292,7 +292,8 @@
 		<url>https://github.com/nineworthies/spring-hateoas</url>
 		<connection>scm:git:git://github.com/nineworthies/spring-hateoas.git</connection>
 		<developerConnection>scm:git:https://github.com/nineworthies/spring-hateoas.git</developerConnection>
-	</scm>
+	  <tag>0.4.1.nineworthies</tag>
+  </scm>
 
 	<distributionManagement>
 		
