@@ -261,6 +261,13 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<extensions>
+			<extension>
+				<groupId>org.springframework.build</groupId>
+				<artifactId>aws-maven</artifactId>
+				<version>4.4.0.RELEASE</version>
+			</extension>
+		</extensions>
 	</build>
 	
 	<pluginRepositories>
@@ -276,11 +283,24 @@
 			<url>http://repo.springsource.org/libs-snapshot</url>
 		</repository>
 	</repositories>
-	
+
 	<scm>
-        <url>https://github.com/alzadude/spring-hateoas</url>
-        <connection>scm:git:https://github.com/alzadude/spring-hateoas.git</connection>
-        <developerConnection>scm:git:https://github.com/alzadude/spring-hateoas.git</developerConnection>
-    </scm>
+		<url>https://github.com/alzadude/spring-hateoas</url>
+		<connection>scm:git:https://github.com/alzadude/spring-hateoas.git</connection>
+		<developerConnection>scm:git:https://github.com/alzadude/spring-hateoas.git</developerConnection>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>nineworthies-repo-release</id>
+			<name>Nineworthies Release Repository</name>
+			<url>s3://nineworthies-repo/release</url>
+		</repository>
+		<snapshotRepository>
+			<id>nineworthies-repo-snapshot</id>
+			<name>Nineworthies Snapshot Repository</name>
+			<url>s3://nineworthies-repo/snapshot</url>
+		</snapshotRepository>
+	</distributionManagement>
 	
 </project>
