@@ -64,6 +64,12 @@
 		<jsonpath.version>0.8.1</jsonpath.version>
 		<minidevjson.version>1.1.1</minidevjson.version>
 		<bundlor.failOnWarnings>true</bundlor.failOnWarnings>
+
+		<scm.url>https://github.com/SpringSource/spring-hateoas</scm.url>
+		<scm.connection>scm:git:git://github.com/SpringSource/spring-hateoas.git</scm.connection>
+		<scm.developerConnection>scm:git:ssh://git@github.com:SpringSource/spring-hateoas.git</scm.developerConnection>
+		<dist.releaseRepo.url></dist.releaseRepo.url>
+		<dist.snapshotRepo.url></dist.snapshotRepo.url>
 	</properties>
 
 	<dependencies>
@@ -289,26 +295,23 @@
 	</repositories>
 
 	<scm>
-		<url>https://github.com/nineworthies/spring-hateoas</url>
-		<connection>scm:git:git://github.com/nineworthies/spring-hateoas.git</connection>
-		<developerConnection>scm:git:https://github.com/nineworthies/spring-hateoas.git</developerConnection>
-	  <tag>HEAD</tag>
-  </scm>
+		<url>${scm.url}</url>
+		<connection>${scm.connection}</connection>
+		<developerConnection>${scm.developerConnection}</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 
 	<distributionManagement>
-		
 		<repository>
-			<id>nineworthies-repo-release</id>
-			<name>Nineworthies Release Repository</name>
-			<url>s3://nineworthies-repo/release</url>
+			<id>${dist.releaseRepo.id}</id>
+			<name>Release Repository</name>
+			<url>${dist.releaseRepo.url}</url>
 		</repository>
-		
 		<snapshotRepository>
-			<id>nineworthies-repo-snapshot</id>
-			<name>Nineworthies Snapshot Repository</name>
-			<url>s3://nineworthies-repo/snapshot</url>
+			<id>${dist.snapshotRepo.id}</id>
+			<name>Snapshot Repository</name>
+			<url>${dist.snapshotRepo.url}</url>
 		</snapshotRepository>
-		
 	</distributionManagement>
 	
 </project>
